@@ -5,14 +5,16 @@ ifeq ($(DEBUG),true)
     $(info >>>Starting custom-apple2.mk)
 endif
 
-# LDFLAGS += -C apple2-asm.cfg --list-bytes 0
+LDFLAGS += -C apple2-system.cfg
+
+# --list-bytes 0
 
 #################################################################
 # DISK creation
 
 SUFFIX =
 DISK_TASKS += .po
-AUTOBOOT := -l
+AUTOBOOT := -s
 APPLE_TOOLS_DIR := ./apple-tools
 
 PROG_XTRA :=

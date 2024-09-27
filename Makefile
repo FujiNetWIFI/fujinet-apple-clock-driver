@@ -1,5 +1,5 @@
 TARGETS = apple2
-PROGRAM := fnclk
+PROGRAM := fnclk.system
 
 export DEBUG := false
 export FUJINET_LIB_VERSION := 4.7.2
