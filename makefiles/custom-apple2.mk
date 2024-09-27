@@ -5,7 +5,7 @@ ifeq ($(DEBUG),true)
     $(info >>>Starting custom-apple2.mk)
 endif
 
-LDFLAGS += -C apple2-system.cfg
+LDFLAGS += -C apple2-system.cfg apple2-iobuf-0800.o
 
 # --list-bytes 0
 

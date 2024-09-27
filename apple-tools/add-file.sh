@@ -80,7 +80,5 @@ ${AC} -as "$DISKFILE" "$NAME" < "$INFILE"
 
 if [ $IS_SYSTEM -eq 1 ]; then
   # add files back in
-  echo "locking >$NAME<"
-  ${ACX} lock "$NAME"
   ${ACX} cp --from "$SRC_PRODOS" BITSY.BOOT QUIT.SYSTEM BASIC.SYSTEM
 fi

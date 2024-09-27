@@ -18,6 +18,7 @@ DATETIME        := $BF06
 DEVNUM          := $BF30
 DATELO          := $BF90
 MACHID          := $BF98
+RRB2NW          := $C080                        ; Read ROM; write RAM bank 2
 ROMIN2          := $C082                        ; Read ROM; no write
 RWRAM1          := $C08B                        ; Read/write RAM bank 1
 
@@ -97,7 +98,7 @@ dest:   .byte   $00                             ; overwrite with clock device
         jsr     DATETIME
 
         ; apple stuff! "Read ROM; no write": https://www.kreativekorp.com/miscpages/a2info/iomemory.shtml
-        lda     ROMIN2
+        lda     RRB2NW
 
         clc
         rts
